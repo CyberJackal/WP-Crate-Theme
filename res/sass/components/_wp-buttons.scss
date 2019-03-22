@@ -1,0 +1,55 @@
+.wp-block-button {
+  .wp-block-button__link {
+    border-radius: .05rem;
+    border: .1rem solid $dove-50;
+    cursor: pointer;
+    display: inline-block;
+    font-size: inherit;
+    font-weight: 400;
+    height: 3.8rem;
+    letter-spacing: .02rem;
+    line-height: 3.8rem;
+    margin-bottom: 1rem;
+    padding: 0 2rem;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 200ms;
+    white-space: nowrap;
+    overflow: visible;
+    min-width: 10rem;
+
+    &:not(.has-background) {
+      background-color: lighten($dove-50, 5%);
+    }
+
+    &:not(.has-text-color) {
+      color: $dove-gray;
+    }
+
+    &:not(.has-background):hover {
+      background: $dove-50;
+    }
+
+    &:focus {
+      background-color: $dove-50;
+      border-color: $dove-50;
+      outline: 0.1rem dotted $gray;
+    }
+  }
+
+  &.is-style-outline .wp-block-button__link,
+  &.is-style-outline .wp-block-button__link:focus,
+  &.is-style-outline .wp-block-button__link:active {
+    border-color: $dove-50;
+
+    &:not(.has-background) {
+      background: transparent;
+    }
+  }
+
+  &.is-style-outline .wp-block-button__link:hover {
+    color: currentColor;
+    background: $dove-50;
+    border-color: $dove-50;
+  }
+}

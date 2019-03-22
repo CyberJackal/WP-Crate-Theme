@@ -1,0 +1,56 @@
+// Alerts
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.alert {
+  position: relative;
+  padding: $alert-padding-y $alert-padding-x;
+  margin-bottom: $alert-margin-bottom;
+  border: $alert-border-width solid transparent;
+  border-radius: $alert-border-radius;
+}
+
+// Headings for larger alerts
+.alert--heading {
+  // Specified to prevent conflicts of changing $headings-color
+  color: inherit;
+}
+
+.alert--link {
+  font-weight: 700;
+}
+
+// Basic Colors
+//
+.alert--primary {
+  @include alert-variant($color-primary, $white);
+}
+
+.alert--secondary {
+  @include alert-variant($color-secondary, $white);
+}
+
+.alert--success {
+  @include alert-variant($color-success, $white);
+}
+
+.alert--info {
+  @include alert-variant($color-info, $white);
+}
+
+.alert--warning {
+  @include alert-variant($color-warning, $white);
+}
+
+.alert--danger {
+  @include alert-variant($color-danger, $white);
+}
+
+// Large-Sized
+.alert--lg {
+  font-size: inherit;
+  font-weight: 100;
+  height: 5.8rem;
+  line-height: 5.8rem;
+  vertical-align: middle;
+  padding: 0 4rem;
+}

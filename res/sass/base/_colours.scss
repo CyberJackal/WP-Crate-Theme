@@ -1,0 +1,410 @@
+// -----------------------------------------------------------------------------
+// Text, background and border colours
+// -----------------------------------------------------------------------------
+
+// Text colours
+.color-dove,
+.color-dove-gray,
+.color-dove-100 {
+  color: $dove-gray;
+}
+.color-dove-90 {
+  color: $dove-90;
+}
+.color-dove-80 {
+  color: $dove-80;
+}
+.color-dove-70 {
+  color: $dove-70;
+}
+.color-dove-60 {
+  color: $dove-60;
+}
+.color-dove-50 {
+  color: $dove-50;
+}
+.color-dove-45 {
+  color: $dove-45;
+}
+.color-dove-40 {
+  color: $dove-40;
+}
+.color-cod {
+  color: $cod-gray;
+}
+.color-white {
+  color: $white;
+}
+.color-concrete {
+  color: $concrete;
+}
+.color-alto {
+  color: $alto;
+}
+.color-silver {
+  color: $silver;
+}
+.color-gray {
+  color: $gray;
+}
+.color-primary {
+  color: $color-primary;
+}
+.color-secondary {
+  color: $color-secondary;
+}
+.color-info,
+.color-info-100 {
+  color: $color-info;
+}
+.color-info-90 {
+  color: $info-90;
+}
+.color-info-80 {
+  color: $info-80;
+}
+.color-info-70 {
+  color: $info-70;
+}
+.color-info-60 {
+  color: $info-60;
+}
+.color-info-50 {
+  color: $info-50;
+}
+.color-success,
+.color-success-100 {
+  color: $color-success;
+}
+.color-success-90 {
+  color: $success-90;
+}
+.color-success-80 {
+  color: $success-80;
+}
+.color-success-70 {
+  color: $success-70;
+}
+.color-success-60 {
+  color: $success-60;
+}
+.color-success-50 {
+  color: $success-50;
+}
+.color-warning,
+.color-warning-100 {
+  color: $color-warning;
+}
+.color-warning-90 {
+  color: $warning-90;
+}
+.color-warning-80 {
+  color: $warning-80;
+}
+.color-warning-70 {
+  color: $warning-70;
+}
+.color-warning-60 {
+  color: $warning-60;
+}
+.color-warning-50 {
+  color: $warning-50;
+}
+.color-error,
+.color-error-100,
+.color-danger,
+.color-danger-100 {
+  color: $color-danger;
+}
+.color-error-90,
+.color-danger-90 {
+  color: $error-90;
+}
+.color-error-80,
+.color-danger-80 {
+  color: $error-80;
+}
+.color-error-70,
+.color-danger-70 {
+  color: $error-70;
+}
+.color-error-60,
+.color-danger-60 {
+  color: $error-60;
+}
+.color-error-50,
+.color-danger-50 {
+  color: $error-50;
+}
+
+
+// Background colours
+.bg-dove,
+.bg-dove-gray,
+.bg-dove-100 {
+  background-color: $dove-gray;
+}
+.bg-dove-90 {
+  background-color: $dove-90;
+}
+.bg-dove-80 {
+  background-color: $dove-80;
+}
+.bg-dove-70 {
+  background-color: $dove-70;
+}
+.bg-dove-60 {
+  background-color: $dove-60;
+}
+.bg-dove-50 {
+  background-color: $dove-50;
+}
+.bg-dove-45 {
+  background-color: $dove-45;
+}
+.bg-dove-40 {
+  background-color: $dove-40;
+}
+.bg-cod {
+  background-color: $cod-gray;
+}
+.bg-white {
+  background-color: $white;
+}
+.bg-concrete {
+  background-color: $concrete;
+}
+.bg-alto {
+  background-color: $alto;
+}
+.bg-silver {
+  background-color: $silver;
+}
+.bg-gray {
+  background-color: $gray;
+}
+.bg-primary {
+  background-color: $color-primary;
+}
+.bg-secondary {
+  background-color: $color-secondary;
+}
+.bg-info,
+.bg-info-100 {
+  background-color: $color-info;
+}
+.bg-info-90 {
+  background-color: $info-90;
+}
+.bg-info-80 {
+  background-color: $info-80;
+}
+.bg-info-70 {
+  background-color: $info-70;
+}
+.bg-info-60 {
+  background-color: $info-60;
+}
+.bg-info-50 {
+  background-color: $info-50;
+}
+.bg-success,
+.bg-success-100 {
+  background-color: $color-success;
+}
+.bg-success-90 {
+  background-color: $success-90;
+}
+.bg-success-80 {
+  background-color: $success-80;
+}
+.bg-success-70 {
+  background-color: $success-70;
+}
+.bg-success-60 {
+  background-color: $success-60;
+}
+.bg-success-50 {
+  background-color: $success-50;
+}
+.bg-warning,
+.bg-warning-100 {
+  background-color: $color-warning;
+}
+.bg-warning-90 {
+  background-color: $warning-90;
+}
+.bg-warning-80 {
+  background-color: $warning-80;
+}
+.bg-warning-70 {
+  background-color: $warning-70;
+}
+.bg-warning-60 {
+  background-color: $warning-60;
+}
+.bg-warning-50 {
+  background-color: $warning-50;
+}
+.bg-error,
+.bg-error-100,
+.bg-danger,
+.bg-danger-100 {
+  background-color: $color-danger;
+}
+.bg-error-90,
+.bg-danger-90 {
+  background-color: $error-90;
+}
+.bg-error-80,
+.bg-danger-80 {
+  background-color: $error-80;
+}
+.bg-error-70,
+.bg-danger-70 {
+  background-color: $error-70;
+}
+.bg-error-60,
+.bg-danger-60 {
+  background-color: $error-60;
+}
+.bg-error-50,
+.bg-danger-50 {
+  background-color: $error-50;
+}
+
+
+// Border colours - must be important due to the way borders work
+.border-dove,
+.border-dove-gray,
+.border-dove-100 {
+  border-color: $dove-gray !important;
+}
+.border-dove-90 {
+  border-color: $dove-90 !important;
+}
+.border-dove-80 {
+  border-color: $dove-80 !important;
+}
+.border-dove-70 {
+  border-color: $dove-70 !important;
+}
+.border-dove-60 {
+  border-color: $dove-60 !important;
+}
+.border-dove-50 {
+  border-color: $dove-50 !important;
+}
+.border-dove-45 {
+  border-color: $dove-45 !important;
+}
+.border-dove-40 {
+  border-color: $dove-40 !important;
+}
+.border-cod {
+  border-color: $cod-gray !important;
+}
+.border-white {
+  border-color: $white !important;
+}
+.border-concrete {
+  border-color: $concrete !important;
+}
+.border-alto {
+  border-color: $alto !important;
+}
+.border-silver {
+  border-color: $silver !important;
+}
+.border-gray {
+  border-color: $gray !important;
+}
+.border-primary {
+  border-color: $color-primary !important;
+}
+.border-secondary {
+  border-color: $color-secondary !important;
+}
+.border-info,
+.border-info-100 {
+  border-color: $color-info !important;
+}
+.border-info-90 {
+  border-color: $info-90 !important;
+}
+.border-info-80 {
+  border-color: $info-80 !important;
+}
+.border-info-70 {
+  border-color: $info-70 !important;
+}
+.border-info-60 {
+  border-color: $info-60 !important;
+}
+.border-info-50 {
+  border-color: $info-50 !important;
+}
+.border-success,
+.border-success-100 {
+  border-color: $color-success !important;
+}
+.border-success-90 {
+  border-color: $success-90 !important;
+}
+.border-success-80 {
+  border-color: $success-80 !important;
+}
+.border-success-70 {
+  border-color: $success-70 !important;
+}
+.border-success-60 {
+  border-color: $success-60 !important;
+}
+.border-success-50 {
+  border-color: $success-50 !important;
+}
+.border-warning,
+.border-warning-100 {
+  border-color: $color-warning !important;
+}
+.border-warning-90 {
+  border-color: $warning-90 !important;
+}
+.border-warning-80 {
+  border-color: $warning-80 !important;
+}
+.border-warning-70 {
+  border-color: $warning-70 !important;
+}
+.border-warning-60 {
+  border-color: $warning-60 !important;
+}
+.border-warning-50 {
+  border-color: $warning-50 !important;
+}
+.border-error,
+.border-error-100,
+.border-danger,
+.border-danger-100 {
+  border-color: $color-danger !important;
+}
+.border-error-90,
+.border-danger-90 {
+  border-color: $error-90 !important;
+}
+.border-error-80,
+.border-danger-80 {
+  border-color: $error-80 !important;
+}
+.border-error-70,
+.border-danger-70 {
+  border-color: $error-70 !important;
+}
+.border-error-60,
+.border-danger-60 {
+  border-color: $error-60 !important;
+}
+.border-error-50,
+.border-danger-50 {
+  border-color: $error-50 !important;
+}

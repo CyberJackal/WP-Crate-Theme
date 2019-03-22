@@ -1,0 +1,18 @@
+.docs-section {
+	background: $white;
+	padding: $gutter-width--mobile;
+}
+
+@media (min-width: 400px) {
+	.docs-section {
+		padding: $gutter-width;
+	}
+}
+
+.demo-grid .col,
+.demo-grid .flex-grid__col {
+	color: $white;
+	background: $gray-dark;
+	margin-bottom: 1.5rem;
+	text-align: center;
+}

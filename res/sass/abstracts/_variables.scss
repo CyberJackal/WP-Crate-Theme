@@ -1,0 +1,202 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+// Breakpoints
+$bp-larger-than-mobile    : "min-width: 400px" !default;
+$bp-larger-than-phablet   : "min-width: 550px" !default;
+$bp-larger-than-tablet    : "min-width: 750px" !default;
+$bp-larger-than-desktop   : "min-width: 1000px" !default;
+$bp-larger-than-desktophd : "min-width: 1200px" !default;
+
+//Globals
+$line-height:            2.4rem !default;
+$global-radius:          .2rem !default;
+$border-color:            #bbb !default;
+
+// Font variables
+$font-sans-serif: "Roboto", Helvetica, Arial, sans-serif !default;
+$font-serif:       "Merriweather", Georgia, "Times New Roman", Times, serif;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+$font-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+$font-base:        $font-sans-serif;
+$font-color:       #222222 !default;
+
+$font-size:                1.6rem !default;
+$font-size--lg:            ($font-size * 1.23); // ~20px
+$font-size--md:            ($font-size * 1.14); // ~16px
+$font-size--sm:            ($font-size * 0.92); // ~13px
+$font-size--xs:            ($font-size * 0.85); // ~12px
+
+
+// Gray colours for theme
+$gray-lightest:          #f6f6f6;
+$gray-lighter:           #e4e4e4;
+$gray-light:             #d3d3d3;
+$gray:                   #868686;
+$gray-dark:              #7e7e7e;
+$gray-darker:            #545454;
+$gray-darkest:           #2a2a2a;
+
+// Named colours here. Note using the true colour name so don't just
+// change the hex value, do a find and replace. for colour names see:
+// http://chir.ag/projects/name-that-color/
+
+
+$dove-gray: #5E5E5E;
+$dove-gray--dark: darken($dove-gray, 5%);
+$dove-gray--light: lighten($dove-gray, 5%);
+$dove-gray--lightest: lighten($dove-gray, 10%);
+$dove-100: $dove-gray;
+$dove-90: lighten($dove-gray, 10%);
+$dove-80: lighten($dove-gray, 20%);
+$dove-70: lighten($dove-gray, 30%);
+$dove-60: lighten($dove-gray, 40%);
+$dove-50: lighten($dove-gray, 50%);
+$dove-45: lighten($dove-gray, 55%);
+$dove-40: lighten($dove-gray, 60%);
+
+$cod-gray: #1B1B1B;
+
+$concrete: #F2F2F2;
+$concrete--dark: darken($concrete, 5%);
+$concrete--light: lighten($concrete, 5%);
+$concrete--lightest: lighten($concrete, 10%);
+
+$alto: #D7D7D7;
+$alto--dark: darken($alto, 5%);
+$alto--light: lighten($alto, 5%);
+$alto--lightest: lighten($alto, 10%);
+
+$silver: #BBB;
+$silver--dark: darken($silver, 5%) !default;
+$silver--light: lighten($silver, 5%) !default;
+$silver--lightest: lighten($silver, 10%) !default;
+
+$mobster: #67626d;
+$mobster--dark: darken($mobster, 5%) !default;
+$mobster--light: lighten($mobster, 5%) !default;
+$mobster--lightest: lighten($mobster, 10%) !default;
+
+$outrageous-orange: #ff5630;
+$athens-gray: #ebecf0;
+$yellow-sea: #ffab00;
+$ocean-green: #36b37e;
+$blue-marguerite: #6554c0;
+
+// classic brand colors
+$color-primary: $dove-gray;
+$color-primary--dark: darken($color-primary, 5%) !default;
+
+$color-secondary: $silver;
+$color-secondary--dark: $silver--dark;
+$color-secondary--light: $silver--light;
+$color-secondary--lightest: $silver--lightest;
+
+$color-info: $blue-marguerite;
+$info-90: lighten($color-info, 10%);
+$info-80: lighten($color-info, 20%);
+$info-70: lighten($color-info, 30%);
+$info-60: lighten($color-info, 40%);
+$info-50: lighten($color-info, 50%);
+
+$color-success: $ocean-green;
+$success-90: lighten($color-success, 10%);
+$success-80: lighten($color-success, 20%);
+$success-70: lighten($color-success, 30%);
+$success-60: lighten($color-success, 40%);
+$success-50: lighten($color-success, 50%);
+
+$color-warning: $yellow-sea;
+$warning-90: lighten($color-warning, 10%);
+$warning-80: lighten($color-warning, 20%);
+$warning-70: lighten($color-warning, 30%);
+$warning-60: lighten($color-warning, 40%);
+$warning-50: lighten($color-warning, 50%);
+
+$color-danger: $outrageous-orange;
+$danger-90: lighten($color-danger, 10%);
+$danger-80: lighten($color-danger, 20%);
+$danger-70: lighten($color-danger, 30%);
+$danger-60: lighten($color-danger, 40%);
+$danger-50: lighten($color-danger, 50%);
+$error-90: lighten($color-danger, 10%);
+$error-80: lighten($color-danger, 20%);
+$error-70: lighten($color-danger, 30%);
+$error-60: lighten($color-danger, 40%);
+$error-50: lighten($color-danger, 50%);
+
+$color-link:            #496ddb !default;
+$color-link--visited:   #9140d4 !default;
+$color-link--hover:     darken($color-link, 10%) !default;
+$color-link--active:    #d44076 !default;
+
+$white:         #fff;
+
+/// Copy text color
+/// @type Color
+$text-color: $gray;
+
+/// Main brand color
+$color-brand: $dove-gray;
+$color-primary: $dove-gray;
+$color-secondary: $silver;
+
+// Z-Index
+$z-index-0:   -1;
+$z-index-1:   10;
+$z-index-2:   20;
+$z-index-3:   30;
+$z-index-4:   40;
+$z-index-5:   50;
+$z-index-6:   60;
+$z-index-7:   70;
+$z-index-8:   80;
+$z-index-9:   90;
+$z-index-10: 100;
+
+
+// Grid Variables
+$container-width: 1000px !default;
+$container-width-larger-than-mobile: 85% !default;
+$container-width-larger-than-phablet: 80% !default;
+
+$gutter-width: 3rem;
+$gutter-width--mobile: 5px;
+
+$total-columns: 12 !default;
+$column-width: 100 / $total-columns !default; // calculates individual column width based off of # of columns
+$column-margin: 2% !default; // space between column grids
+
+// Flex Grid Variables
+$flex-grid__column--fixed-width: 200px !default;
+$flex-grid--column-margin: 2% !default;
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/assets/' !default;
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+$border-radius:               .2rem !default;
+$border-radius-lg:            .3rem !default;
+$border-radius-sm:            .2rem !default;
+
+// Alerts
+//
+// Define alert colors, border radius, and padding.
+
+$alert-padding-y:                   1rem !default;
+$alert-padding-x:                   1.25rem !default;
+$alert-margin-bottom:               1rem !default;
+$alert-border-radius:               $border-radius !default;
+$alert-link-font-weight:            700;
+$alert-border-width:                1px;
+
+$alert-bg-level:                    -10 !default;
+$alert-border-level:                -9 !default;
+$alert-color-level:                 6 !default;

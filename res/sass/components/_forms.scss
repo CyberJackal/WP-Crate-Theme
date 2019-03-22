@@ -1,0 +1,652 @@
+// Text field
+input {
+  &[type="email"],
+  &[type="number"],
+  &[type="search"],
+  &[type="text"],
+  &[type="tel"],
+  &[type="url"],
+  &[type="password"] {
+    width: 100%;
+    height: 3.8rem;
+    padding: .6rem 1rem;
+    margin-bottom: .25rem;
+    &.validate {
+      border-color: $color-danger;
+      box-shadow: 0 0 1px $color-danger;
+    }
+    &:placeholder-shown {
+      background-color: lighten($dove-50, 10%);
+    }
+    &:-ms-input-placeholder {
+      background-color: $dove-50;
+    }
+    &:hover {
+      border-color: $color-primary;
+    }
+    &:focus {
+      background-color: $white;
+    }
+    &::placeholder {
+      color: $dove-80;
+    }
+  }
+}
+label {
+  font-weight: 100;
+}
+.input--description {
+  font-style: normal;
+  color: $dove-80;
+}
+
+// Multiline text field
+textarea {
+  width: 100%;
+  padding: .8rem 1rem;
+  margin-bottom: .25rem;
+  line-height: 2rem;
+  height: 7.8rem;
+  &:placeholder-shown {
+    background-color: lighten($dove-50, 10%);
+    height: 3.8rem;
+    min-height: 3.8rem;
+  }
+  &:-ms-input-placeholder {
+    background-color: $dove-50;
+    height: 3.8rem;
+    min-height: 3.8rem;
+  }
+  &:hover {
+    border-color: $color-primary;
+  }
+  &:focus {
+    background-color: $white;
+  }
+}
+
+// Text field with label action
+.label--action {
+  text-align: right;
+  color: $color-info;
+  text-shadow: 0 0 1px rgba($color-primary, .2);
+  cursor: pointer;
+  display: contents;
+}
+
+// Text/number field with select
+.input--with-select {
+  display: flex;
+  select {
+    padding-left: .5rem;
+    padding-right: .25rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: none;
+  }
+  input {
+    &[type="email"],
+    &[type="number"],
+    &[type="search"],
+    &[type="text"],
+    &[type="tel"],
+    &[type="url"],
+    &[type="password"] {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+  select {
+    width: auto;
+    background-color: $white;
+  }
+  &:hover,
+  &:focus-within {
+    select {
+      border-color: $color-primary;
+    }
+    input {
+      &[type="email"],
+      &[type="number"],
+      &[type="search"],
+      &[type="text"],
+      &[type="tel"],
+      &[type="url"],
+      &[type="password"] {
+        border-color: $color-primary;
+      }
+    }
+    input[type="number"] {
+      &::-webkit-inner-spin-button,
+      &::-webkit-outer-spin-button {
+        border-color: $color-primary;
+      }
+    }
+    .inputnumber--wrapper:before {
+      border-color: $color-primary;
+    }
+  }
+}
+
+// Number field
+input[type="number"] {
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    opacity: 1;
+    height: 3.8rem;
+    width: 3rem;
+    margin-right: -1.1rem;
+    background-color: $white;
+    border: 1px solid $dove-50;
+    border-top-right-radius: .2rem;
+    border-bottom-right-radius: .2rem;
+    -webkit-appearance: unset;
+    cursor: pointer;
+  }
+  &:hover,
+  &:focus {
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      border-color: $color-primary;
+    }
+  }
+}
+.inputnumber--wrapper {
+  position: relative;
+  width: 100%;
+  &:before,
+  &:after {
+    content: '';
+    width: 3rem;
+    height: calc(3.8rem / 2);
+    right: .1rem;
+    position: absolute;
+    text-align: center;
+    font-size: .8rem;
+    line-height: calc(3.8rem / 2);
+    pointer-events: none;
+  }
+  &:before {
+    content: '\25B2';
+    top: 0;
+    border-bottom: .1rem solid $dove-50;
+  }
+  &:after {
+    content: '\25BC';
+    top: 2rem;
+  }
+  &:hover,
+  &:focus-within {
+    &:before {
+      border-color: $color-primary;
+    }
+  }
+}
+
+// Email
+input[type=email]:focus {
+  &::placeholder {
+    color: transparent;
+  }
+}
+
+// Validation
+.validateText {
+  color: $color-danger;
+  display: block;
+  text-align: right;
+}
+.validate .input--with-icon i {
+  color: $color-danger;
+}
+
+// Password field
+input[type="password"] {
+  &:not(:placeholder-shown) {
+    font-size: 3rem;
+    color: $dove-90;
+  }
+}
+.input--with-icon {
+  position: relative;
+  i {
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    line-height: 3.8rem;
+    font-size: 1.5rem;
+    &.fa-eye {
+      cursor: pointer;
+    }
+  }
+}
+
+// Datepicker
+.daterangepicker select.hourselect, .daterangepicker select.minuteselect, .daterangepicker select.secondselect, .daterangepicker select.ampmselect {
+  width: auto;
+  border-color: $dove-50;
+  cursor: pointer;
+}
+.daterangepicker .drp-buttons .btn {
+  line-height: 1;
+}
+
+// Radio button
+input[type="radio"]+label,
+input[type="checkbox"]+label {
+  display: inline-block;
+  cursor: pointer;
+  width: calc(100% - 3rem);
+}
+input[type="radio"]:disabled+label,
+input[type="checkbox"]:disabled+label {
+  color: $dove-50;
+  pointer-events: none;
+}
+input[type="radio"] {
+  -webkit-appearance: none;
+   cursor: pointer;
+  &:before {
+    content: '';
+    display: inline-block;
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-right: .4rem;
+    margin-bottom: -.4rem;
+    margin-top: .5rem;
+    border: .1rem solid darken($dove-50, 5%);
+    border-radius: 999rem;
+    background-color: lighten($dove-50, 5%);
+  }
+  &:hover,
+  &:focus {
+    &:before {
+      border-color: $color-primary;
+    }
+    outline: none;
+  }
+  &:checked {
+    &:before {
+      background: $dove-80;
+      background: radial-gradient(
+        circle,
+        $color-primary 35%,
+        $color-primary 36%,
+        lighten($dove-50, 5%) 37%);
+      border-color: $color-primary;
+    }
+  }
+  &:disabled {
+    pointer-events: none;
+    &:before {
+      border-color: transparent;
+    }
+  }
+}
+
+// Checkbox
+input[type="checkbox"] {
+  -webkit-appearance: none;
+   cursor: pointer;
+  line-height: 1.6rem;
+  &:before {
+    content: '\f00c';
+    display: inline-block;
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-right: .4rem;
+    margin-bottom: -.4rem;
+    margin-top: .5rem;
+    border: .1rem solid darken($dove-50, 5%);
+    border-radius: .2rem;
+    background-color: lighten($dove-50, 5%);
+    line-height: 1.6rem;
+    text-align: center;
+    line-height: 1.6rem;
+    font-size: 1rem;
+    color: transparent;
+  }
+  &:hover,
+  &:focus {
+    &:before {
+      border-color: $color-primary;
+    }
+    outline: none;
+  }
+  &:checked {
+    &:before {
+      background: $color-primary;
+      border-color: $color-primary;
+      color: $white;
+    }
+  }
+  &:disabled {
+    pointer-events: none;
+    &:before {
+      border-color: transparent;
+    }
+  }
+}
+
+// Switch
+$color-primary: #6200ee;
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 3.6rem;
+  height: 1.4rem;
+  margin: .5rem .25rem;
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 999rem;
+    background-color: $dove-80;
+    background-color: $dove-70;
+    -webkit-transition: .4s;
+    transition: .4s;
+    &:before {
+      position: absolute;
+      content: '';
+      height: 2.2rem;
+      width: 2.2rem;
+      left: -.4rem;
+      bottom: -.4rem;
+      border-radius: 999rem;
+      background-color: $white;
+      -webkit-transition: 200ms;
+      transition: 200ms;
+      box-shadow: 0 1px 2px transparentize($dove-gray, .5);
+    }
+  }
+  &:hover {
+    .slider {
+      &:before {
+        box-shadow: 0 0 0 10px transparentize($dove-gray, .8)
+      }
+    }
+  }
+}
+
+input:checked + .slider {
+  background-color: lighten($color-primary, 20%);
+  &:before {
+    -webkit-transform: translateX(2rem);
+    -ms-transform: translateX(2rem);
+    transform: translateX(2rem);
+    background-color: $color-primary;
+  }
+}
+
+.switch:hover input:checked + .slider:before {
+  box-shadow: 0 0 0 10px transparentize($color-primary, .9);
+}
+
+.switch input:disabled + .slider {
+  pointer-events: none;
+  opacity: .5;
+}
+$color-primary: $dove-gray;
+
+// Dropdown
+select {
+  width: 100%;
+  background-color: lighten($dove-50, 10%);
+  cursor: pointer;
+}
+
+// Likert survey
+.wrap {
+  font: 12px Arial, san-serif;
+}
+h1.likert-header {
+  padding-left: 4.25%;
+  margin: 2rem 0 0;
+}
+form {
+  .statement {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 3rem 0 0 4.25%;
+    margin-bottom: 1rem;
+  }
+  .likert {
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0 0 3.5rem;
+    display: block;
+    border-bottom: .2rem solid lighten($dove-50, 5%);
+    &:last-of-type {
+      border-bottom: 0;
+    }
+    &:before {
+      content: '';
+      position: relative;
+      top: 1.6rem;
+      left: 9.5%;
+      display: block;
+      background-color: lighten($dove-50, 5%);
+      height: .5rem;
+      width: 78%;
+    }
+    li {
+      display: inline-block;
+      width: 19%;
+      text-align: center;
+      vertical-align: top;
+      input[type=radio] {
+        display: block;
+        position: relative;
+        top: 0;
+        left: 50%;
+        margin-left: -.6rem;
+      }
+      label {
+        width: 100%;
+        margin-top: .75rem;
+      }
+    }
+  }
+  .buttons {
+    text-align: right;
+    button {
+      margin-left: .5rem;
+    }
+  }
+}
+
+// Star rating
+.fa-star.checked {
+  color: gold;
+}
+
+// Slider
+$color-primary: darken(mediumpurple, 10%);
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+
+  /* WebKit/Blink */
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 999rem;
+    background: $color-primary;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    margin-top: -5px; /* Need to specify a margin in Chrome */
+    transition-duration: .2s;
+  }
+  &::-webkit-slider-runnable-track {
+    width: 100%;
+    height: .2rem;
+    cursor: pointer;
+    background: $color-primary;
+    border-radius: 999rem;
+  }
+
+  /* Firefox */
+  &::-moz-range-thumb {
+    border: none;
+    box-shadow: none;
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 999rem;
+    background: $color-primary;
+    cursor: pointer;
+    transition-duration: .2s;
+  }
+  &::-moz-range-track {
+    width: 100%;
+    height: .2rem;
+    cursor: pointer;
+    box-shadow: none;
+    background: $color-primary;
+    border-radius: 999rem;
+  }
+
+  /* IE */
+  &::-ms-thumb {
+    border: none;
+    box-shadow: none;
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 999rem;
+    background: $color-primary;
+    cursor: pointer;
+    transition-duration: .2s;
+  }
+  &::-ms-track {
+    width: 100%;
+    height: .2rem;
+    cursor: pointer;
+    background: $color-primary;
+    border-radius: 999rem;
+    border: none;
+    color: transparent;
+  }
+  &::-ms-fill-lower {
+    background: $color-primary;
+    border: none;
+    border-radius: 999rem;
+    box-shadow: none;
+  }
+  &::-ms-fill-upper {
+    background: $color-primary;
+    border: none;
+    border-radius: 999rem;
+    box-shadow: none;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none; /* Removes the blue border. */
+    &::-webkit-slider-thumb {
+      box-shadow: 0 0 0 1rem transparentize($color-primary, .9);
+    }
+  }
+
+  &:active {
+    &::-webkit-slider-thumb {
+      box-shadow: 0 0 0 2rem transparentize($color-primary, .9);
+    }
+  }
+
+  &:disabled {
+    pointer-events: none;
+    &::-webkit-slider-thumb {
+      background: $dove-50;
+    }
+    &::-webkit-slider-runnable-track {
+      background: $dove-50;
+    }
+
+    &::-moz-range-thumb {
+      background: $dove-50;
+    }
+    &::-moz-range-track {
+      background: $dove-50;
+    }
+
+    &::-ms-thumb {
+      background: $dove-50;
+    }
+    &::-ms-track {
+      background: $dove-50;
+    }
+    &::-ms-fill-lower {
+      background: $dove-50;
+    }
+    &::-ms-fill-upper {
+      background: $dove-50;
+    }
+  }
+}
+$color-primary: $dove-gray;
+
+// Dropzone
+.dropzone {
+  width: 100%;
+  min-height: 30rem;
+  background-color: lighten($dove-50, 5%);
+  border: .2rem dashed darken($dove-50, 5%);
+  display: table;
+  text-align: center;
+  margin-bottom: 3rem;
+  .dropzone-inner {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  &.dropzone--dragdrop {
+    background-color: $white;
+    border-color: $color-primary;
+    color: $color-primary;
+    font-size: 2rem;
+  }
+  &.dropzone--has-files {
+    text-align: left;
+    .dropzone-inner {
+      vertical-align: top;
+      margin: .75rem;
+      display: table;
+      .dropzone-file {
+        display: inline-flex;
+        margin: .75rem;
+        background-color: $white;
+        width: calc(50% - 1.5rem);
+        border: 1px solid $dove-50;
+        .dropzone-img {
+          height: 6rem;
+          width: 6rem;
+          background-color: darken($dove-50, 10%);
+          margin-right: .5rem;
+        }
+        .dropzone-content {
+          padding: 1rem;
+          .dropzone-title {
+            font-size: 1.5rem;
+            line-height: 2rem;
+            margin-bottom: .25rem;
+          }
+          .dropzone-size {
+            font-size: 1.4rem;
+            line-height: 1;
+          }
+        }
+      }
+    }
+  }
+}

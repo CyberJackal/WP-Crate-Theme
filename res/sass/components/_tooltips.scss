@@ -1,0 +1,102 @@
+// Tooltips
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.tooltip {
+  position: absolute;
+  z-index: 1070;
+  display: block;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  text-align: start;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: normal;
+  word-break: normal;
+  word-spacing: normal;
+  white-space: normal;
+  line-break: auto;
+  font-size: 1.25rem;
+  word-wrap: break-word;
+  opacity: 0;
+  &.show {
+    opacity: .9;
+  }
+  .arrow {
+    position: absolute;
+    display: block;
+    width: .8rem;
+    height: .4rem;
+    &:before {
+      position: absolute;
+      content: "";
+      border-color: transparent;
+      border-style: solid;
+    }
+  }
+}
+
+.bs-tooltip-auto[x-placement^=top],
+.bs-tooltip-top {
+  padding: .4rem 0;
+  .arrow {
+    bottom: 0;
+    &:before {
+      top: 0;
+      border-width: .4rem .4rem 0;
+      border-top-color: #000;
+    }
+  }
+}
+.bs-tooltip-auto[x-placement^=right],
+.bs-tooltip-right {
+  padding: 0 .4rem;
+  .arrow {
+    left: 0;
+    width: .4rem;
+    height: .8rem;
+    &:before {
+      right: 0;
+      border-width: .4rem .4rem .4rem 0;
+      border-right-color: #000;
+    }
+  }
+}
+.bs-tooltip-auto[x-placement^=bottom],
+.bs-tooltip-bottom {
+  padding: .4rem 0;
+  .arrow {
+    top: 0;
+    &:before {
+      bottom: 0;
+      border-width: 0 .4rem .4rem;
+      border-bottom-color: #000;
+    }
+  }
+}
+.bs-tooltip-auto[x-placement^=left],
+.bs-tooltip-left {
+  padding: 0 .4rem;
+  .arrow {
+    right: 0;
+    width: .4rem;
+    height: .8rem;
+    &:before {
+      left: 0;
+      border-width: .4rem 0 .4rem .4rem;
+      border-left-color: #000;
+    }
+  }
+}
+.tooltip-inner {
+  max-width: 200px;
+  padding: .5rem 1rem;
+  color: #fff;
+  text-align: center;
+  background-color: #000;
+  border-radius: .25rem;
+}

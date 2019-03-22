@@ -1,0 +1,127 @@
+// Callouts
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.callout {
+  border: 1px solid $dove-50;
+  border-radius: .2rem;
+  transition-duration: 200ms;
+  background-color: $white;
+  .callout--inner {
+    padding: 1.5rem 2rem;
+    .callout--title {
+      font-size: 2.4rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+    }
+    .btn--primary {
+      margin-right: 1rem;
+    }
+    .btn--text {
+      color: $color-primary;
+    }
+    ul {
+      color: $color-primary;
+      li {
+        display: block;
+        a {
+          margin: -.5rem;
+        }
+        &:before {
+          content: "\f05a";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          margin-right: 1rem;
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+  &.callout--dark {
+    color: $white;
+    background-color: $color-primary;
+    a {
+      color: $white;
+    }
+    .btn {
+      border: 1px solid $white;
+    }
+    .btn--text {
+      color: $white;
+      background-color: $color-primary;
+      border-color: $color-primary;
+      &:hover {
+        background-color: darken($color-primary, 10%);
+      }
+    }
+    ul {
+      color: $white;
+    }
+  }
+  img {
+    width: 100%;
+  }
+  &.callout--with-img {
+    display: flex;
+    flex-direction: column;
+    &.callout-img--top {
+      flex-direction: column;
+    }
+    &.callout-img--left {
+      flex-direction: row;
+    }
+    &.callout-img--right {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+.hero {
+  display: block;
+  padding: 2rem;
+  padding-left: 0;
+  .hero-inner {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom left;
+    padding-left: 2rem;
+    padding-bottom: 5rem;
+    h5 {
+      max-width: 60%;
+      margin-bottom: 1rem;
+      font-weight: bold;
+      font-size: 3rem;
+    }
+    p {
+      max-width: 60%;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+    }
+    @media (max-width: 767px) {
+      p {
+        display: none;
+      }
+      h5 {
+        max-width: 60%;
+        font-size: 2.4rem;
+      }
+      .btn {
+        display: none;
+      }
+    }
+  }
+  .hero-mobile {
+    display: none;
+    padding: 2rem;
+    p {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+    @media (max-width: 767px) {
+      display: block;
+    }
+  }
+}

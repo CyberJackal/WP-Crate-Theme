@@ -1,0 +1,39 @@
+// -----------------------------------------------------------------------------
+// Contains styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+/*
+
+Contained markup:
+<footer class="site-footer container">
+  <div class="footer--content">
+    <p>
+      Footer content here.
+    </p>
+  </div>
+</footer>
+
+Bleed markup:
+Markup:
+<footer class="site-footer">
+  <div class="container">
+    <p>
+      Footer content here.
+    </p>
+  </div>
+</footer>
+*/
+
+.site-footer {
+  background: $gray;
+}
+
+.footer--content {
+  padding: 1rem $gutter-width--mobile;
+}
+
+@media (min-width: 400px) {
+	.footer--content {
+		padding-left: $gutter-width;
+		padding-right: $gutter-width;
+	}
+}
